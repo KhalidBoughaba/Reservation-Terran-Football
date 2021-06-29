@@ -1,5 +1,13 @@
+/*
+mainColor:#80BD3C;
+*/
+
+:root {
+  --mainColor: #80bd3c;
+  --filter: #00000094;
+}
 body {
-  background-image: url("../imges/stadium-py.jpg");
+  background-image: url('../imges/stadium-py.jpg');
   background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,7 +16,65 @@ body {
 }
 
 /* Start Navbar */
+
+.bg-light {
+  background-color: var(--filter) !important;
+  border-bottom: thin;
+}
+
 .navbar-brand .logo {
   width: 100px;
 }
+.navbar-nav .nav-link {
+  color: var(--mainColor) !important;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.navbar-nav .active > .nav-link {
+  color: var(--mainColor) !important;
+  background-color: white;
+  border-radius: 10px;
+  border-bottom: none !important;
+  padding: 11px;
+}
+.navbar-nav .active > .nav-link:hover {
+  background-color: var(--mainColor);
+  color: white !important;
+}
+
+.navbar-nav .nav-item:first-child {
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: var(--mainColor);
+  border-style: solid;
+  transition: 0.8s;
+}
+.navbar-nav .nav-item :first-child :hover {
+  border-color: var(--mainColor);
+}
 /* End Navbar */
+
+/* Start Home */
+.row {
+  background-color: var(--filter);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.home .soccer {
+  width: 700px;
+}
+.home .definition h1 {
+  text-transform: uppercase !important;
+  color: var(--mainColor);
+}
+.home .definition {
+  text-transform: uppercase !important;
+  color: var(--mainColor);
+  line-height: 30px;
+}
+/* End Home */
