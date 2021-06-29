@@ -1,0 +1,14 @@
+body {
+  background-image: url("../imges/stadium-py.jpg");
+  background-position: right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 3000px;
+}
+
+/* Start Navbar */
+.navbar-brand .logo {
+  width: 100px;
+}
+/* End Navbar */
