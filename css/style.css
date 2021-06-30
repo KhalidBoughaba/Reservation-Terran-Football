@@ -6,8 +6,13 @@ mainColor:#80BD3C;
   --mainColor: #80bd3c;
   --filter: #00000094;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url("../imges/stadium-py.jpg");
+  background-image: url('../imges/stadium-py.jpg');
   background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,6 +66,7 @@ body {
 /* Start Home */
 .home {
   background-color: var(--filter);
+
 }
 .home .row {
   align-items: center;
@@ -71,11 +77,18 @@ body {
   overflow: hidden;
 }
 
-.home .definition h1 {
+h1 {
   text-transform: uppercase !important;
   color: var(--mainColor);
   font-weight: 700;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+p {
+  color: white;
+}
+.home .row{
+  border: 5px solid white;
+  border-radius: 40px;
 }
 .home .definition {
   text-transform: uppercase !important;
@@ -85,21 +98,22 @@ body {
 /* End Home */
 
 /* Start Stade */
-.stade .row {
-
+.stade {
+  background-color: var(--filter);
+  padding: 100px 0;
+}
+.stade .terrain {
+  margin-bottom: 60px;
 }
 .stade .card {
   border: 15px solid white;
   border-bottom-left-radius: 55px;
   border-top-right-radius: 55px;
   margin-bottom: 14px;
-  box-shadow: -8px -3px 11px 4px #80bd3c;
-  
+  box-shadow: -8px -3px 0px 4px #80bd3c;
 }
-.stade .terrain {
-  color: var(--mainColor);
-}
-.stade .row .card img{
+
+.stade .row .card img {
   border-bottom-left-radius: 40px;
   border-top-right-radius: 40px;
   height: 200px;
