@@ -7,7 +7,7 @@ mainColor:#80BD3C;
   --filter: #00000094;
 }
 body {
-  background-image: url('../imges/stadium-py.jpg');
+  background-image: url("../imges/stadium-py.jpg");
   background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@ body {
 }
 .navbar-nav .nav-link {
   color: var(--mainColor) !important;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   margin-left: 20px;
@@ -59,18 +59,23 @@ body {
 /* End Navbar */
 
 /* Start Home */
-.row {
+.home {
   background-color: var(--filter);
-  border-radius: 20px;
+}
+.home .row {
   align-items: center;
   justify-content: center;
 }
 .home .soccer {
   width: 700px;
+  overflow: hidden;
 }
+
 .home .definition h1 {
   text-transform: uppercase !important;
   color: var(--mainColor);
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
 }
 .home .definition {
   text-transform: uppercase !important;
@@ -78,3 +83,24 @@ body {
   line-height: 30px;
 }
 /* End Home */
+
+/* Start Stade */
+.stade .row {
+
+}
+.stade .card {
+  border: 15px solid white;
+  border-bottom-left-radius: 55px;
+  border-top-right-radius: 55px;
+  margin-bottom: 14px;
+  
+}
+.stade .terrain {
+  color: var(--mainColor);
+}
+.stade .row .card img{
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+  height: 200px;
+}
+/* End Start */
