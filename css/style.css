@@ -17,7 +17,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 3000px;
+  height: 6000px;
 }
 
 /* Start Navbar */
@@ -132,9 +132,8 @@ p {
   right: 0;
   height: 100%;
 }
-.reservations .team .img-fluid{
+.reservations .team .img-fluid {
   box-shadow: 0 0 40px -10px var(--mainColor);
-
 }
 .reservations .content {
   position: absolute;
@@ -156,3 +155,10 @@ p {
   background-color: white !important;
 }
 /* End Reservations */
+
+/* End ABOUT */
+.about {
+  background-color: var(--filter);
+  padding: 100px 0;
+}
+/* End ABOUT */
