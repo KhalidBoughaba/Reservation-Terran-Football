@@ -7,12 +7,12 @@ mainColor:#80BD3C;
   --filter: #00000094;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-image: url('../imges/stadium-py.jpg');
+  background-image: url("../imges/stadium-py.jpg");
   background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,15 +39,15 @@ body {
 }
 
 .navbar-nav .active > .nav-link {
-  color: var(--mainColor) !important;
-  background-color: white;
+  color: white !important;
+  background-color: var(--mainColor) !important;
   border-radius: 10px;
   border-bottom: none !important;
   padding: 11px;
 }
 .navbar-nav .active > .nav-link:hover {
-  background-color: var(--mainColor);
-  color: white !important;
+  background-color: white !important;
+  color: var(--mainColor) !important;
 }
 
 .navbar-nav .nav-item:first-child {
@@ -66,7 +66,6 @@ body {
 /* Start Home */
 .home {
   background-color: var(--filter);
-
 }
 .home .row {
   align-items: center;
@@ -81,12 +80,12 @@ h1 {
   text-transform: uppercase !important;
   color: var(--mainColor);
   font-weight: 700;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 p {
   color: white;
 }
-.home .row{
+.home .row {
   border: 5px solid white;
   border-radius: 40px;
 }
@@ -98,36 +97,62 @@ p {
 /* End Home */
 
 /* Start Stade */
-<<<<<<< HEAD
-.stade .row {
-=======
 .stade {
   background-color: var(--filter);
   padding: 100px 0;
 }
 .stade .terrain {
   margin-bottom: 60px;
->>>>>>> 7eac03d94724b2f47dea846281c185afb2603bb4
 }
 .stade .card {
   border: 15px solid white;
   border-bottom-left-radius: 55px;
   border-top-right-radius: 55px;
   margin-bottom: 14px;
-<<<<<<< HEAD
-  box-shadow: -8px -3px 11px 4px #80bd3c;
-}
-.stade .terrain {
-  color: var(--mainColor);
-}
-=======
   box-shadow: -8px -3px 0px 4px #80bd3c;
 }
 
->>>>>>> 7eac03d94724b2f47dea846281c185afb2603bb4
 .stade .row .card img {
   border-bottom-left-radius: 40px;
   border-top-right-radius: 40px;
   height: 200px;
 }
-/* End Start */
+/* End Stade */
+
+/* Start Reservations */
+.reservations {
+  position: relative;
+}
+.reservations .team::before {
+  content: "";
+  background-color: var(--filter) !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.reservations .team .img-fluid{
+  box-shadow: 0 0 40px -10px var(--mainColor);
+
+}
+.reservations .content {
+  position: absolute;
+  left: 29%;
+  top: 44px;
+}
+.reservations .btn {
+  position: absolute;
+  left: 41%;
+  bottom: 86px;
+  width: 200px;
+  height: 50px;
+  background-color: var(--mainColor) !important;
+  color: white;
+  font-weight: bold;
+}
+.reservations .btn:hover {
+  color: var(--mainColor) !important;
+  background-color: white !important;
+}
+/* End Reservations */
