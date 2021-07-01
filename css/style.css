@@ -86,7 +86,6 @@ body {
 
 /* Start Stade */
 .stade .row {
-
 }
 .stade .card {
   border: 15px solid white;
@@ -94,12 +93,11 @@ body {
   border-top-right-radius: 55px;
   margin-bottom: 14px;
   box-shadow: -8px -3px 11px 4px #80bd3c;
-  
 }
 .stade .terrain {
   color: var(--mainColor);
 }
-.stade .row .card img{
+.stade .row .card img {
   border-bottom-left-radius: 40px;
   border-top-right-radius: 40px;
   height: 200px;
