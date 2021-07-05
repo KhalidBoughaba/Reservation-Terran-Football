@@ -138,13 +138,13 @@ p {
 .reservations .content {
   position: absolute;
   left: 29%;
-  top: 44px;
+  top: 80px;
 }
 .reservations .btn {
   position: absolute;
-  left: 41%;
-  bottom: 86px;
-  width: 200px;
+  left: 40%;
+  bottom: 133px;
+  width: 228px;
   height: 50px;
   background-color: var(--mainColor) !important;
   color: white;
@@ -162,3 +162,42 @@ p {
   padding: 100px 0;
 }
 /* End ABOUT */
+
+/* Start Footer */
+.footer {
+  background: linear-gradient(178.54deg, #7aad3fd9 61.87%, var(--filter) 100%);
+  box-shadow: -1px -1px 3px 5px #7aad3fd9;
+  padding: 30px 0;
+}
+
+.footer .site-info h2 {
+  color: white;
+  margin-bottom: 25px;
+}
+.footer .site-info p {
+  color: #fffc;
+  line-height: 2.8;
+}
+.footer .helpful-links h3,
+.footer .contact h3 {
+  font-family: "Otomanopee One", sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer .helpful-links ul li,
+.footer .contact ul li {
+  line-height: 2.8;
+  color: white;
+}
+.footer .list-unstyled li i {
+  color: black;
+}
+.footer .list-unstyled li a {
+  color: white;
+}
+/* End Footer */

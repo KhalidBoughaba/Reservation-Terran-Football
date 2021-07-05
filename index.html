@@ -5,16 +5,23 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Mala3iib</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href="css/aos.css">
-    <link rel='stylesheet' type='text/css' href="css/bootstrap.min.css">
-    <link rel='stylesheet' type='text/css' href='css/style.css'>
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <!-- Style Css -->
+    <link rel='stylesheet' type='text/css' href="css/aos.css">
+    <link rel='stylesheet' type='text/css' href="css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href="css/all.css">
+    <link rel='stylesheet' type='text/css' href='css/style.css'>
+
 </head>
 <body class="img-fluid">
     <!-- Start Navbar -->
-
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -29,13 +36,13 @@
                 <a class="nav-link" href="#home">Accueil</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">A propos</a>
+                <a class="nav-link" href="#about">A propos</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Réserver<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#reserver">Réserver<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             </div>
@@ -138,7 +145,7 @@
     <!-- End Terrain -->
 
     <!-- Start RÉSERVER -->
-    <div class="reservations text-center">
+    <div id="reserver" class="reservations text-center">
             <div class="team">
                 <img src="./imges/team.jpg" class="img-fluid" alt="reserver">
             </div> 
@@ -146,17 +153,18 @@
                     <h1>Be a part of the great story</h1>
                     <P>This is a wider card with supporting text below</P>
             </div>
-                <button class="btn bg-success">RÉSERVER</button>
+                <button class="btn">RÉSERVER</button>
     </div>
 
     <!-- End RÉSERVER -->
 
     <!-- End A PROPOS-->
-    <div class="about text-center">
+    <div id="about" class="about text-center">
         <div class="container">
             <div class="definition">
                 <h1>a propos</h1>
                 <p>This is a wider card with supporting text below</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum rerum nostrum ipsum hic, repudiandae ea quas cum sit commodi incidunt corrupti recusandae quaerat eius. Unde amet asperiores sequi voluptate illo.</p>
             </div>
             <div class="row">
                 <img src="" alt="">
@@ -166,13 +174,52 @@
     </div>
     <!-- Start A PROPOS-->
 
+    <!-- Start Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="site-info">
+                        <a class="navbar-brand" href="#"><h2>MaLa3iiB</h2></a>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eveniet rem tempora debitis praesentium itaque nihil.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="helpful-links">
+                        <h3>Liens Utiles</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-futbol"></i> <a class="" href="#home">Accueil</a></li>
+                            <li><i class="fas fa-futbol"></i> <a class="" href="#">Reserver</a></li>
+                            <li><i class="fas fa-futbol"></i> <a class="" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact">
+                        <h3>Contact</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-futbol"></i> Adresse: Hay el Boughaz Rue 70A</li>
+                            <li><i class="fas fa-futbol"></i> Phone: +212 88459377</li>
+                            <li><i class="fas fa-futbol"></i> Email: <a href="mailto:info@mala3iib.com?subject=Contact">info@mala3iib.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- End Footer-->
+
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/aos.js"></script>
     <script>
         AOS.init({
-            duration:"1500"
+            duration:"1500",
+            once:"false"
         });
     </script>
 </body>
