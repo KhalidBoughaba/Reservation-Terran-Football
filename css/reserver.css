@@ -11,14 +11,38 @@ mainColor:#80BD3C;
 html {
   scroll-behavior: smooth;
 }
+.select-reservation .slide::after{
+  content: "";
+  background-color: var(--filter) !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.select-reservation .slide img{
+  height: 500px;
+}
 
 .info-resrvation{
   padding: 100px 0;
 }
 
-.select-reservation .info-resrvation button{
+.select-reservation .info-resrvation .row button{
   background-color: #efefef;
   margin: 10px;
   padding: 13px;
   width: 110px;
+}
+
+.info-resrvation h1{
+  margin: 50px 0;
+}
+
+.info-resrvation .info-player .name input{
+  border-radius: 10px;
+  border: none;
+  background-color: #ddd;
+  padding: 10px;
 }
