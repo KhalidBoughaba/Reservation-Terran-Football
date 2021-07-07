@@ -1,0 +1,44 @@
+
+    // Users
+[
+    {
+        "id" : 1,
+        "name" : "test test",
+        "number" : "06243636727"
+    },
+    {
+        "id" : 2,
+        "name" : "test test",
+        "number" : "06243636727"
+    },
+    {
+        "id" : 3,
+        "name" : "test test",
+        "number" : "06243636727"
+    }
+]
+
+
+// Reservation
+
+[
+    {
+        "id" : 1,
+        "userId" : 1,
+        "date" : "2021-07-07",
+        "hour" : "18",
+        "status" : 0/1/2
+    },
+
+    {
+        "id" : 2,
+        "userId" : 1,
+        "date" : "2021-07-12",
+        "hour" : "19",
+        "status" : 0/1/2
+    }
+]
+
+
+
+

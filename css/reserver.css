@@ -11,7 +11,7 @@ mainColor:#80BD3C;
 html {
   scroll-behavior: smooth;
 }
-.select-reservation .slide::after{
+.select-reservation .slide::after {
   content: "";
   background-color: var(--filter) !important;
   position: absolute;
@@ -21,41 +21,41 @@ html {
   height: 100%;
 }
 
-.select-reservation .slide img{
+.select-reservation .slide img {
   height: 500px;
 }
 
-.info-resrvation{
+.info-resrvation {
   padding: 100px 0;
 }
 
-span{
+span {
   color: red;
 }
-.select-reservation .info-resrvation .row button{
+.select-reservation .info-resrvation .row button {
   background-color: #efefef;
   margin: 10px;
   padding: 13px;
   width: 110px;
 }
 
-.info-resrvation h1{
+.info-resrvation h1 {
   margin: 50px 0;
 }
 
-.info-resrvation .info-player .name input{
+.info-resrvation .info-player .name input {
   border-radius: 10px;
   border: none;
   background-color: #ddd;
   padding: 10px;
 }
 
-.select-reservation .info-resrvation form{
+.select-reservation .info-resrvation form {
   padding: 40px;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background: #dee2e66b;
 }
-.select-reservation .info-resrvation form button{
+.select-reservation .info-resrvation form button {
   color: white;
   background-color: var(--mainColor);
   border-color: var(--mainColor);
@@ -65,5 +65,4 @@ span{
   background-color: white;
   color: var(--mainColor);
   border-color: var(--mainColor);
-  
 }
