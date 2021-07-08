@@ -15,8 +15,18 @@
                     event.stopPropagation();
                 }
                 form.classList.add('was-validated');
+
+            }, false);
+        });
+    }, false);
+})();
+
                 document.querySelector(".submit-signup").addEventListener('submit', (e) => {
                     e.preventDefault();
+
+                    if (!document.querySelector(".submit-signup").classList.contains('was-validated')) {
+                        return;
+                    }
 
                     let prenom = document.querySelector(".prenom").value,
                         nom = document.querySelector(".nom").value,
@@ -34,7 +44,8 @@
                             password: password,
                             phone: phone
                         },
-                        success: () => {
+                        success: (data) => {
+                            console.log(data)
                             document.querySelector('.close').click()
                             $('#registre').get(0).reset()
                             $('#registre').removeClass('was-validated')
@@ -43,10 +54,6 @@
                     })
 
                 })
-            }, false);
-        });
-    }, false);
-})();
 
 document.getElementById('btnOpen').onclick = () => {
     $('#registre').removeClass('was-validated')
