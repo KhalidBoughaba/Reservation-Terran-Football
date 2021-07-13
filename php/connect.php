@@ -10,4 +10,3 @@ $querySQL = "INSERT INTO registration(prenom, nom, password, phone) VALUES ('$pr
 mysqli_query($con,$querySQL);
 ?>
 
-
