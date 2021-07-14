@@ -16,7 +16,7 @@ class CrudProduct extends React.Component {
 
         // affichage de données par Ajax
 
-        $.getJSON("api/getProduct.php",
+        $.getJSON("/api/getProduct.php",
             function (data) {
                 this.setState({ productsArray: data });
             }.bind(this))
@@ -24,25 +24,7 @@ class CrudProduct extends React.Component {
                 console.log(errorThrown);
             });
     }
-    //add product
-    addproduct(e) {
-        $.ajax({
-            url: "/api/addProduct.php",
-            method: "POST",
-            data: {
-                Firstname: Firstname.value,
-                Lastname: Lastname.value,
-                Matricule: Matricule.value,
-                Email: Email.value,
-            },
-            success: function (data) {
-                this.chargementDonnees()
-                $("#exampleModalCenter").modal('hide');
-                console.log(data)
-            }.bind(this)
-        })
-        e.preventDefault();
-    }
+
     // Remove product
     removeproduct(i) {
         $.ajax({
@@ -161,11 +143,11 @@ class CrudProduct extends React.Component {
                 <table className="table table-hover">
                     <thead className="thead">
                         <tr>
-                            <th scope="col">Firstname</th>
-                            <th scope="col">Lastname</th>
-                            <th scope="col">Matricule</th>
-                            <th scope="col">Email</th>
-                            <th scope="col"></th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Télephone</th>
+                            <th scope="col">Heures</th>
+                            <th scope="col">Date</th>
                             <th scope="col"></th>
 
 

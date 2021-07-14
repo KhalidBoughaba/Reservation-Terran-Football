@@ -7,13 +7,17 @@ class Product implements JsonSerializable {
 			 'id' => $this->_id,
              'Firstname' => $this->_Firstname,
              'Lastname' => $this->_Lastname,
-             'phone' => $this->_phone,
+             'Phone' => $this->_Phone,
+             'Hours' => $this->_Hours,
+             'Date' => $this->_Date,
         );
     }
 	private $_id;
 	private $_Firstname;
 	private $_Lastname;
-	private $_phone;
+	private $_Phone;
+	private $_Hours;
+	private $_Date;
 	
 	public function __construct() {
 	
@@ -24,7 +28,9 @@ class Product implements JsonSerializable {
 		public function getId() { return $this->_id; }
 		public function getName() { return $this->_Firstname; }
 		public function getLast() { return $this->_Lastname; }
-		public function getMatricule() { return $this->_phone; }
+		public function getPhone() { return $this->_Phone; }
+		public function getHours() { return $this->_Hours; }
+		public function getDate() { return $this->_Date; }
 
 
 		public function setId($id){
@@ -39,10 +45,17 @@ class Product implements JsonSerializable {
 					$this->_Lastname = $Lastname;
 		}
 
-		public function setMatricule($Matricule){
-				$this->_phone = $phone;
+		public function setPhone($Phone){
+				$this->_Phone = $Phone;
 		}
 
+		public function setHours($Hours){
+					$this->_Hours = $Hours;
+		}
+
+		public function setDate($Date){
+					$this->_Date = $Date;
+		}
 
 }
 ?>
