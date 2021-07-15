@@ -150,7 +150,20 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
       console.log(data);
       console.log(status);
       console.log(xhr);
-      // getall();
+
+      hour = null;
+      document.getElementById("datefield").value = "";
+      document.getElementById("prenom").value = "";
+      document.getElementById("nom").value = "";
+      document.getElementById("tele").value = "";
+
+      document.getElementById("formReserver").classList.remove("was-validated");
+
+      // ducument
+      //   .querySelector(".btnTimeReserve")
+      //   .addEventListener("click", () => {
+      //     this.classList.add("pendding");
+      //   });
     },
   });
 });
