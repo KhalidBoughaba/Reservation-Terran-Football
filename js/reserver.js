@@ -137,7 +137,7 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
 
   //add product
   $.ajax({
-    url: "Prototype-Code-Source/crud/api/addProduct.php",
+    url: "crud/api/addProduct.php",
     type: "POST",
     data: {
       Date: date,
