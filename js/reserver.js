@@ -137,7 +137,7 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
 
   //add product
   $.ajax({
-    url: "admin/api/addProduct.php",
+    url: "Prototype-Code-Source/crud/api/addProduct.php",
     type: "POST",
     data: {
       Date: date,
@@ -150,10 +150,9 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
       console.log(data);
       console.log(status);
       console.log(xhr);
+      // getall();
     },
   });
-
-
 });
 
 // -------------------------- End ---------------------
