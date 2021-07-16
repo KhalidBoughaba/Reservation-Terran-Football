@@ -16,6 +16,7 @@ class productsManager {
 			$item->setPhone($row["Phone"]);
 			$item->setHours($row["Hours"]);
 			$item->setDate($row["Date"]);
+			$item->setstatus($row["status"]);
 			array_push($stack, $item);
 		}
 		return $stack;

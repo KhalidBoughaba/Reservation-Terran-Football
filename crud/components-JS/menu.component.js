@@ -26,8 +26,8 @@ class Menu extends React.Component {
             {/* Right navbar links */}
             <div className="user-panel mt-3 pb-1 mb-1 d-flex col-md-3 text-right">
               <div className="info">
-                <a href="#" className="d-block">
-                  &#124; &nbsp;&nbsp;&nbsp;&nbsp;Boughaba Khalid
+                <a href="#" className="d-block text-dark">
+                  Boughaba Khalid
                 </a>
               </div>
               <div className="image">

@@ -10,6 +10,7 @@ class Product implements JsonSerializable {
              'Phone' => $this->_Phone,
              'Hours' => $this->_Hours,
              'Date' => $this->_Date,
+             'status' => $this->_status,
         );
     }
 	private $_id;
@@ -18,6 +19,7 @@ class Product implements JsonSerializable {
 	private $_Phone;
 	private $_Hours;
 	private $_Date;
+	private $_status;
 	
 	public function __construct() {
 	
@@ -31,6 +33,7 @@ class Product implements JsonSerializable {
 		public function getPhone() { return $this->_Phone; }
 		public function getHours() { return $this->_Hours; }
 		public function getDate() { return $this->_Date; }
+		public function getstatus() { return $this->_status; }
 
 
 		public function setId($id){
@@ -55,6 +58,10 @@ class Product implements JsonSerializable {
 
 		public function setDate($Date){
 					$this->_Date = $Date;
+		}
+
+		public function setstatus($status){
+					$this->_status = $status;
 		}
 
 }
