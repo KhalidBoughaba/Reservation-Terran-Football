@@ -22,6 +22,23 @@ class productsManager {
 		return $stack;
 
 	}
+
+	// Get Just Hours Reserved
+	public function getReserved($date){
+		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
+		$stack = array();
+		$req = "SELECT * FROM member WHERE `Date` = '$date'";
+		$result = $dbh->query($req)->fetchAll();
+		foreach ($result as $row){
+			$item = new Product();
+			$item->setHours($row["Hours"]);
+			$item->setDate($row["Date"]);
+			$item->setstatus($row["status"]);
+			array_push($stack, $item);
+		}
+		return $stack;
+
+	}
 //Add Product
 		public function add($product){
 			$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");

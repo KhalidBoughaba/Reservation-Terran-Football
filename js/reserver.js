@@ -29,6 +29,70 @@
 
 //------------------------------- END ---------------------------------
 
+
+const AfficheReservedHours = ()=>{
+  $.ajax({
+    url : 'crud/api/reservedDateHours.php',
+    method : 'POST',
+    data : {
+      date : document.getElementById('datefield').value
+    },
+    datatype : 'JSON',
+    success: (data)=>{
+      console.log(data)
+      data = JSON.parse(data)
+
+      if (!data.length) {
+        document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
+          let btnTime = btn.getAttribute("time");
+          
+            if (btn.classList.contains("bg-warning")) {
+              btn.classList.remove("bg-warning")
+            }
+            if (btn.classList.contains("bg-danger")) {
+              btn.classList.remove("bg-danger");
+              btn.removeAttribute("disabled");
+            }
+          
+        })
+        return;
+      }
+
+      data.forEach((reservation) => {
+        console.log(reservation["Hours"])
+        console.log(reservation["status"])
+  
+        document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
+          let btnTime = btn.getAttribute("time");
+          if (btnTime == reservation["Hours"]) {
+            if (btn.classList.contains("bg-warning")) {
+              btn.classList.remove("bg-warning")
+            }
+            if (btn.classList.contains("bg-danger")) {
+              btn.classList.remove("bg-danger");
+              btn.removeAttribute("disabled");
+            }
+
+            if (reservation["status"] == 0) {
+              btn.classList.add("bg-warning");
+            }
+            if (reservation["status"] == 1){
+              btn.classList.add("bg-danger");
+              btn.setAttribute("disabled", "");
+            }
+          }
+        });
+      });
+    }
+  })
+}
+
+
+
+
+
+
+
 // ================= Set Input Reservation Date ===============
 
 const setDateInputReservation = () => {
@@ -51,6 +115,7 @@ const setDateInputReservation = () => {
   }
 
   document.getElementById("datefield").value = settoday;
+  AfficheReservedHours()
 };
 
 setDateInputReservation();
@@ -59,52 +124,10 @@ setDateInputReservation();
 
 // ======================== Get Reserved Date ==============
 
-const dataToday = [
-  {
-    id: 1,
-    userId: 1,
-    date: "2021-07-07",
-    hour: "18",
-    status: 0,
-  },
 
-  {
-    id: 2,
-    userId: 1,
-    date: "2021-07-12",
-    hour: "19",
-    status: 1,
-  },
 
-  {
-    id: 3,
-    userId: 1,
-    date: "2021-07-12",
-    hour: "13",
-    status: 1,
-  },
-  {
-    id: 4,
-    userId: 1,
-    date: "2021-07-12",
-    hour: "14",
-    status: 0,
-  },
-];
 
-dataToday.forEach((reservation) => {
-  document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
-    let btnTime = btn.getAttribute("time");
-    if (btnTime == reservation.hour) {
-      if (reservation.status == 0) {
-        btn.classList.add("bg-warning");
-      } else {
-        btn.classList.add("bg-danger");
-        btn.setAttribute("disabled", "");
-      }
-    }
-  });
-});
+
 
 let hour;
 let date = document.getElementById("datefield").value;
@@ -119,8 +142,10 @@ document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
 // read date
 document.getElementById("datefield").addEventListener("change", () => {
   date = document.getElementById("datefield").value;
-  console.log(date);
   hour = null;
+  console.log(date);
+  AfficheReservedHours()
+
 });
 
 let prenom;
