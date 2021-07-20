@@ -28,14 +28,29 @@ class CrudProduct extends React.Component {
 
     // affichage de données par Ajax
 
-    $.getJSON(
-      "api/getProduct.php",
-      function (data) {
+    // $.getJSON(
+    //   "api/getProduct.php",
+    //   function (data) {
+    //     this.setState({ ...this.state, productsArray: data });
+    //   }.bind(this)
+    // ).fail(function (jqXHR, textStatus, errorThrown) {
+    //   console.log(errorThrown);
+    // });
+
+
+    $.ajax({
+      url : 'api/getProduct.php',
+      method: 'POST',
+      data : {
+        date : this.state.date
+      },
+      success:(data)=>{
+        data = JSON.parse(data)
         this.setState({ ...this.state, productsArray: data });
-      }.bind(this)
-    ).fail(function (jqXHR, textStatus, errorThrown) {
-      console.log(errorThrown);
-    });
+      }
+    })
+
+
   }
   // //add product
   // addproduct(e) {
@@ -90,14 +105,18 @@ class CrudProduct extends React.Component {
     e.preventDefault();
   }
 
-  onChangeDate(newDate) {
+  async onChangeDate(newDate) {
     // this.setState({value: e.target.value})
-    this.setState((prev)=>{
+
+    await this.setState((prev)=>{
       return {
         ...prev,
         date: newDate
       }
     });
+
+    this.chargementDonnees()
+
   }
 
   // setToday(today){

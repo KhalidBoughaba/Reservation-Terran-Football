@@ -3,10 +3,10 @@ require_once('../model/product.php');
 
 class productsManager {
 
-	public function getList(){
+	public function getList($date){
 		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
 		$stack = array();
-		$req = "SELECT * FROM member";
+		$req = "SELECT * FROM member WHERE `Date` = '$date'";
 		$result = $dbh->query($req)->fetchAll();
 		foreach ($result as $row){
 			$item = new Product();
