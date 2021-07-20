@@ -3,13 +3,13 @@
 class Product implements JsonSerializable {
 	public function jsonSerialize()
     {
-		if (!$this->_id) {
-			return array(
-				'Hours' => $this->_Hours,
-				'Date' => $this->_Date,
-				'status' => $this->_status,
-		   );
-		}
+		// if (!$this->_id) {
+		// 	return array(
+		// 		'Hours' => $this->_Hours,
+		// 		'Date' => $this->_Date,
+		// 		'status' => $this->_status,
+		//    );
+		// }
         return array(
 			 'id' => $this->_id,
              'Firstname' => $this->_Firstname,
