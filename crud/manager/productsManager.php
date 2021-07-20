@@ -6,7 +6,7 @@ class productsManager {
 	public function getList(){
 		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
 		$stack = array();
-		$req = "SELECT * FROM member";
+		$req = "SELECT * FROM reservation";
 		$result = $dbh->query($req)->fetchAll();
 		foreach ($result as $row){
 			$item = new Product();
@@ -42,7 +42,7 @@ class productsManager {
 //Add Product
 		public function add($product){
 			$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
-			$req = "INSERT INTO `member`(`id`,`Firstname`, `Lastname`,`Phone`,`Hours`,`Date`) VALUES (:id,:Firstname,:Lastname,:Phone,:Hours,:Date)";
+			$req = "INSERT INTO `reservation`(`id`,`Firstname`, `Lastname`,`Phone`,`Hours`,`Date`) VALUES (:id,:Firstname,:Lastname,:Phone,:Hours,:Date)";
 
 			$updateProductQuery = $dbh ->prepare($req);
 			$updateProductQuery -> bindParam(":id",$product->getId(),PDO::PARAM_STR);	
@@ -58,7 +58,7 @@ class productsManager {
 		public function delete($id){
 			$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
 
-			$req = "DELETE FROM member WHERE id = $id";
+			$req = "DELETE FROM reservation WHERE id = $id";
 			$deleteProduct = $dbh->prepare($req);
             $deleteProduct->execute();
         }
@@ -66,7 +66,7 @@ class productsManager {
 		public function update($product){
 			$id = $product->getId();
 			$dbh = new PDO("mysql:host=localhost;dbname=formers","root","");
-			$req = "UPDATE Former SET Firstname = :Firstname,Lastname = :Lastname,Matricule = :Matricule,Email = :Email WHERE id = $id";
+			$req = "UPDATE reservation SET Firstname = :Firstname,Lastname = :Lastname,Matricule = :Matricule,Email = :Email WHERE id = $id";
 			$updateProductQuery = $dbh ->prepare($req);
 			$updateProductQuery -> bindParam(":Firstname",$product->getName(),PDO::PARAM_STR);
             $updateProductQuery -> bindParam(":Lastname",$product->getLast(),PDO::PARAM_STR);
