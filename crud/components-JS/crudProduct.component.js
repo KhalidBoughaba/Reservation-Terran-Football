@@ -185,7 +185,7 @@ class CrudProduct extends React.Component {
     this.chargementDonnees();
   }
 
-  changeStatus(id, newStatus) {
+changeStatus(id, newStatus) {
     console.log(id, newStatus);
     $.ajax({
       url: "api/updateStatus.php",
@@ -195,10 +195,14 @@ class CrudProduct extends React.Component {
         status: newStatus,
       },
       success: (data) => {
+        this.getNumPending();
+        this.getNumAccepted();
+        this.getNumRefused();
         this.chargementDonnees();
         console.log(data);
       },
     });
+
   }
 
   async FilterByStatus(status) {
