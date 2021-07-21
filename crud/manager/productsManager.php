@@ -3,10 +3,10 @@ require_once('../model/product.php');
 
 class productsManager {
 
-	public function getList($date){
+	public function getList($date,$status){
 		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
 		$stack = array();
-		$req = "SELECT * FROM member WHERE `Date` = '$date'";
+		$req = "SELECT * FROM member WHERE `Date` = '$date' AND `status` = '$status'";
 		$result = $dbh->query($req)->fetchAll();
 		foreach ($result as $row){
 			$item = new Product();
@@ -38,6 +38,26 @@ class productsManager {
 		}
 		return $stack;
 
+	}
+
+
+	public function getNumPending($date){
+		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
+		$req = "SELECT count(*) FROM member WHERE `Date` = '$date' AND `status` = '0'";
+		$result = $dbh->query($req)->fetchColumn();
+		return $result;
+	}
+	public function getNumAccepted($date){
+		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
+		$req = "SELECT count(*) FROM member WHERE `Date` = '$date' AND `status` = '1'";
+		$result = $dbh->query($req)->fetchColumn();
+		return $result;
+	}
+	public function getNumRefused($date){
+		$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
+		$req = "SELECT count(*) FROM member WHERE `Date` = '$date' AND `status` = '2'";
+		$result = $dbh->query($req)->fetchColumn();
+		return $result;
 	}
 //Add Product
 		public function add($product){

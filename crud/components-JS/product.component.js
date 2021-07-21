@@ -1,6 +1,24 @@
 class Product extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      show : false
+    }
+  }
+
+  handleClose(){
+    $('#exampleModal').modal('hide');
+    this.setState({
+      show : false
+    })
+  }
+
+  handleShow(){
+    $('#exampleModal').modal('show');
+    console.log('please show')
+    this.setState({
+      show : true
+    })
   }
 
   render() {
@@ -39,8 +57,11 @@ class Product extends React.Component {
           <button
             type="button"
             className="btn btn-success ml-5"
-            onClick={this.props.onClickUpdate}
+            // onClick={this.props.onClickUpdate}
+            data-bs-toggle="modal" data-bs-target="#exampleModal"
+            onClick={this.handleShow.bind(this)}
           >
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={16}
@@ -76,6 +97,23 @@ class Product extends React.Component {
             </svg>
           </button>
         </td>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  onClick={this.handleClose.bind(this)}></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={this.handleClose.bind(this)}>Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
       </tr>
     );
   }
