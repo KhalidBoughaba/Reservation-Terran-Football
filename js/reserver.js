@@ -44,7 +44,7 @@ const AfficheReservedHours = ()=>{
 
       if (!data.length) {
         document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
-          let btnTime = btn.getAttribute("time");
+          // let btnTime = btn.getAttribute("time");
           
             if (btn.classList.contains("bg-warning")) {
               btn.classList.remove("bg-warning")
@@ -58,20 +58,29 @@ const AfficheReservedHours = ()=>{
         return;
       }
 
+
+      document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
+        // let btnTime = btn.getAttribute("time");
+        
+          if (btn.classList.contains("bg-warning")) {
+            btn.classList.remove("bg-warning")
+          }
+          if (btn.classList.contains("bg-danger")) {
+            btn.classList.remove("bg-danger");
+            btn.removeAttribute("disabled");
+          }
+        
+      })
+
+
       data.forEach((reservation) => {
         console.log(reservation["Hours"])
         console.log(reservation["status"])
   
         document.querySelectorAll(".btnTimeReserve").forEach((btn) => {
           let btnTime = btn.getAttribute("time");
+
           if (btnTime == reservation["Hours"]) {
-            if (btn.classList.contains("bg-warning")) {
-              btn.classList.remove("bg-warning")
-            }
-            if (btn.classList.contains("bg-danger")) {
-              btn.classList.remove("bg-danger");
-              btn.removeAttribute("disabled");
-            }
 
             if (reservation["status"] == 0) {
               btn.classList.add("bg-warning");
