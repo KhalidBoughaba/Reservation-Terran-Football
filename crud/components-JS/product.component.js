@@ -11,7 +11,29 @@ class Product extends React.Component {
         <td>{this.props.product.Phone}</td>
         <td>{this.props.product.Hours}</td>
         <td>{this.props.product.Date}</td>
-        <td>{this.props.product.status}</td>
+        <td>
+          <select
+          onChange={(e)=>this.props.onchangeStatus(e.target.value)}
+          >
+            {+this.props.product.status === 0 ? (
+              <option value='0'selected>Pending</option>
+            ) : (
+              <option value='0'>Pending</option>
+            )}
+
+            {+this.props.product.status === 1 ? (
+              <option value='1' selected>Accepted</option>
+            ) : (
+              <option value='1'>Accepted</option>
+            )}
+
+            {+this.props.product.status === 2 ? (
+              <option value='2' selected>Refused</option>
+            ) : (
+              <option value='2'>Refused</option>
+            )}
+          </select>
+        </td>
         <td></td>
         <td>
           <button

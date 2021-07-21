@@ -63,15 +63,25 @@ class productsManager {
             $deleteProduct->execute();
         }
 		// update product		
-		public function update($product){
+		// public function update($product){
+		// 	$id = $product->getId();
+		// 	$dbh = new PDO("mysql:host=localhost;dbname=formers","root","");
+		// 	$req = "UPDATE Former SET Firstname = :Firstname,Lastname = :Lastname,Matricule = :Matricule,Email = :Email WHERE id = $id";
+		// 	$updateProductQuery = $dbh ->prepare($req);
+		// 	$updateProductQuery -> bindParam(":Firstname",$product->getName(),PDO::PARAM_STR);
+        //     $updateProductQuery -> bindParam(":Lastname",$product->getLast(),PDO::PARAM_STR);
+        //     $updateProductQuery -> bindParam(":Matricule",$product->getMatricule(),PDO::PARAM_STR);
+        //     $updateProductQuery -> bindParam(":Email",$product->getEmail(),PDO::PARAM_STR);
+		// 	$updateProductQuery->execute();
+        // }
+
+		public function updateStatus($product){
+			
 			$id = $product->getId();
-			$dbh = new PDO("mysql:host=localhost;dbname=formers","root","");
-			$req = "UPDATE Former SET Firstname = :Firstname,Lastname = :Lastname,Matricule = :Matricule,Email = :Email WHERE id = $id";
+			$dbh = new PDO("mysql:host=localhost;dbname=members_reserve","root","");
+			$req = "UPDATE member SET status = :status WHERE id = $id ";
 			$updateProductQuery = $dbh ->prepare($req);
-			$updateProductQuery -> bindParam(":Firstname",$product->getName(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":Lastname",$product->getLast(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":Matricule",$product->getMatricule(),PDO::PARAM_STR);
-            $updateProductQuery -> bindParam(":Email",$product->getEmail(),PDO::PARAM_STR);
+			$updateProductQuery -> bindParam(":status",$product->getstatus(),PDO::PARAM_STR);
 			$updateProductQuery->execute();
         }
 }

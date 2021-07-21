@@ -119,19 +119,27 @@ class CrudProduct extends React.Component {
 
   }
 
-  // setToday(today){
-
-  //     this.setState({
-  //       ...this.state,
-  //       date: today,
-  //     });
-
-  // }
+  changeStatus(id,newStatus){
+    console.log(id,newStatus)
+    $.ajax({
+      url: "api/updateStatus.php",
+      method: "POST",
+      data: {
+        id: id,
+        status : newStatus
+      },
+      success: (data) => {
+        this.chargementDonnees();
+        console.log(data);
+      }
+    });
+  }
 
   render() {
     let productsArray = this.state.productsArray.map((product) => {
       return (
         <Product
+          onchangeStatus={this.changeStatus.bind(this,product.id)}
           key={product.id}
           product={product}
           onClickClose={this.removeproduct.bind(this, product.id)}
