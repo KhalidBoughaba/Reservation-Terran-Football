@@ -203,6 +203,6 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
 
 let buttons = document.querySelectorAll(".btnTimeReserve")
 
-buttons.onfocus = function(){
+buttons.onclick = function(){
   buttons.classList.add("btns");
 };

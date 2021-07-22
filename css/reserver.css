@@ -66,9 +66,8 @@ span {
   color: var(--mainColor);
   border-color: var(--mainColor);
 }
-.btns{
-  background-color: var(--mainColor)!important;
-
+.btns {
+  background-color: var(--mainColor) !important;
 }
 
 .pendding {
@@ -90,4 +89,25 @@ input[type='date'] {
   border-radius: 22px;
   font-weight: bold;
   margin-bottom: 1.5em;
+}
+
+.info-resrvation .key {
+
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  width: 485px;
+  margin-top: 15px;
+
+}
+
+.info-resrvation .key span:first-child {
+  margin-right: 10px;
+}
+.info-resrvation .key span:last-child {
+  margin-left: 10px;
+
+}
+.info-resrvation .key i:first-child{
+  color: #ddd;
 }

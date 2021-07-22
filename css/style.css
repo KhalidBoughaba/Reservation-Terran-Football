@@ -34,8 +34,14 @@ html {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-left: 20px;
+  
 }
+.navbar-nav .nav-link:hover {
+  color: white !important;
+
+  
+}
+
 
 .navbar-nav .active > .nav-link {
   color: white !important;
@@ -49,17 +55,6 @@ html {
   color: var(--mainColor) !important;
 }
 
-.navbar-nav .nav-item:first-child {
-  border-top: transparent;
-  border-left: transparent;
-  border-right: transparent;
-  border-bottom: var(--mainColor);
-  border-style: solid;
-  transition: 0.8s;
-}
-.navbar-nav .nav-item :first-child :hover {
-  border-color: var(--mainColor);
-}
 /* End Navbar */
 
 /* Start Home */
