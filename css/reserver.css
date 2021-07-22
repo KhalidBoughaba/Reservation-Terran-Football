@@ -12,7 +12,7 @@ html {
   scroll-behavior: smooth;
 }
 .select-reservation .slide::after {
-  content: "";
+  content: '';
   background-color: var(--filter) !important;
   position: absolute;
   left: 0;
@@ -66,11 +66,28 @@ span {
   color: var(--mainColor);
   border-color: var(--mainColor);
 }
+.btns{
+  background-color: var(--mainColor)!important;
 
-.pendding{
-  color: #FFC107;
 }
 
-.reserved{
-  color: #F8F9FA;
+.pendding {
+  color: #ffc107;
+}
+
+.reserved {
+  color: #f8f9fa;
+}
+
+/*style input date*/
+
+input[type='date'] {
+  width: 274px;
+  align-self: center;
+  padding: 3px 62px !important;
+  border: 3px solid;
+  border-color: var(--mainColor);
+  border-radius: 22px;
+  font-weight: bold;
+  margin-bottom: 1.5em;
 }

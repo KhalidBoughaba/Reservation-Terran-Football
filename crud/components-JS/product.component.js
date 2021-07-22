@@ -30,7 +30,7 @@ class Product extends React.Component {
         <td>{this.props.product.Hours}</td>
         <td>{this.props.product.Date}</td>
         <td>
-          <select
+          <select className="custom-select"
           onChange={(e)=>this.props.onchangeStatus(e.target.value)}
           >
             {+this.props.product.status === 0 ? (

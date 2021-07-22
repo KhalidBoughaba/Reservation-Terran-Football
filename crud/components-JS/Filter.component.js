@@ -87,7 +87,7 @@ class FilterDates extends React.Component {
           }
           min={this.props.min}
           max={this.props.max}
-          className="datesAdm"
+          className="datesAdm form-control"
           // onLoad={this.props.setToday(
           //   new Date().getFullYear() +
           //     "-" +
@@ -98,26 +98,26 @@ class FilterDates extends React.Component {
           //     new Date().getDate()
           // )}
         />
-        <div>
-          <button
+        <div className="mb-4">
+          <button className ="btn border-warning mr-2 font-weight-bold w-25"
             style={
-              +this.props.status === 0 ? { backgroundColor: "yellow" } : {}
+              +this.props.status === 0 ? { backgroundColor: "#FFC107" } : {}
             }
             onClick={() => this.props.onFilterByStatus(0)}
           >
-          {`Pending ${this.props.pending}`} 
+          {`En attendant  "${this.props.pending}"`} 
           </button>
-          <button
-            style={+this.props.status === 1 ? { backgroundColor: "#19d010" } : {}}
+          <button className ="btn border-success mr-2 font-weight-bold w-25"
+            style={+this.props.status === 1 ? { backgroundColor: "#28A745",color:"white"} : {}}
             onClick={() => this.props.onFilterByStatus(1)}
           >
-             {`Accepted ${this.props.accepted}`} 
+             {`Accepté  "${this.props.accepted}"`} 
           </button>
-          <button
-            style={+this.props.status === 2 ? { backgroundColor: "red" } : {}}
+          <button className ="btn border-danger font-weight-bold w-25"
+            style={+this.props.status === 2 ? { backgroundColor: "#DC3545",color:"white"} : {}}
             onClick={() => this.props.onFilterByStatus(2)}
           >
-             {`Refused ${this.props.refused}`} 
+             {`Refusé  "${this.props.refused}"`} 
              
           </button>
         </div>

@@ -97,11 +97,6 @@ const AfficheReservedHours = ()=>{
 }
 
 
-
-
-
-
-
 // ================= Set Input Reservation Date ===============
 
 const setDateInputReservation = () => {
@@ -203,3 +198,11 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
 });
 
 // -------------------------- End ---------------------
+
+
+
+let buttons = document.querySelectorAll(".btnTimeReserve")
+
+buttons.onfocus = function(){
+  buttons.classList.add("btns");
+};
