@@ -199,10 +199,24 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
 
 // -------------------------- End ---------------------
 
+//================= Display Price the Day and the night =================
+
+let buttons = document.querySelectorAll(".btnTimeReserve");
+//let heurs = buttons.getAttribute("time");  
 
 
-let buttons = document.querySelectorAll(".btnTimeReserve")
 
-buttons.onclick = function(){
-  buttons.classList.add("btns");
-};
+for(var i = 0; i<buttons.length; i++){
+
+    buttons[i].onclick = function(){
+
+        if(this.getAttribute("time") < "20"){
+            document.getElementById("prix").innerHTML="Le prix pour équipe: 35 DH";
+        }else{
+            document.getElementById("prix").innerHTML="Le prix pour équipe: 70 DH";
+
+        }
+  
+    }
+}
+//---------------------------- END ------------------------------------

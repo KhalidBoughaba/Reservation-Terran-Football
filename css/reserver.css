@@ -66,8 +66,12 @@ span {
   color: var(--mainColor);
   border-color: var(--mainColor);
 }
-.btns {
+
+.btn:focus {
+  outline: 0;
   background-color: var(--mainColor) !important;
+  color: white;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .pendding {
@@ -76,6 +80,14 @@ span {
 
 .reserved {
   color: #f8f9fa;
+}
+/*Style Price the Day and the night*/
+
+.info-resrvation .heurs p {
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(227.41deg, #287136 0%, #80bd3c 84%);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
 /*style input date*/
@@ -91,14 +103,19 @@ input[type='date'] {
   margin-bottom: 1.5em;
 }
 
-.info-resrvation .key {
+.info-resrvation .form-control:focus {
+  color: #000000 !important;
+  border-color: #15b91d !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(74, 212, 6, 0.25) !important;
+}
 
+.info-resrvation .key {
   border: 2px solid #ddd;
   padding: 10px;
   border-radius: 10px;
   width: 485px;
   margin-top: 15px;
-
 }
 
 .info-resrvation .key span:first-child {
@@ -106,8 +123,7 @@ input[type='date'] {
 }
 .info-resrvation .key span:last-child {
   margin-left: 10px;
-
 }
-.info-resrvation .key i:first-child{
+.info-resrvation .key i:first-child {
   color: #ddd;
 }
