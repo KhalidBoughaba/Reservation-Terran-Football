@@ -188,11 +188,6 @@ document.getElementById("formReserver").addEventListener("submit", (e) => {
 
       document.getElementById("formReserver").classList.remove("was-validated");
 
-      // ducument
-      //   .querySelector(".btnTimeReserve")
-      //   .addEventListener("click", () => {
-      //     this.classList.add("pendding");
-      //   });
     },
   });
 });

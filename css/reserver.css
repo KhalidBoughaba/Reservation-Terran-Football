@@ -11,6 +11,14 @@ mainColor:#80BD3C;
 html {
   scroll-behavior: smooth;
 }
+/*navbar
+.navbar {
+  background: linear-gradient(227.41deg, #287136 0%, #80bd3c 84%);
+}
+.navbar-nav .nav-link {
+  color: white !important;
+
+}*/
 .select-reservation .slide::after {
   content: '';
   background-color: var(--filter) !important;
@@ -126,4 +134,10 @@ input[type='date'] {
 }
 .info-resrvation .key i:first-child {
   color: #ddd;
+}
+
+/*footer*/
+.footer {
+  background: linear-gradient(227.41deg, #287136 0%, #80bd3c 84%);
+  padding: 30px 0;
 }
