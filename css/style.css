@@ -10,9 +10,16 @@ mainColor:#80BD3C;
 html {
   scroll-behavior: smooth;
 }
-
+::-moz-selection {
+  color: white;
+  background: var(--mainColor);
+}
+::selection {
+  color: white;
+  background-color: var(--mainColor);
+}
 .body {
-  background-image: url("../imges/stadium-py.jpg");
+  background-image: url('../imges/stadium-py.jpg');
   background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,14 +41,15 @@ html {
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  
 }
 .navbar-nav .nav-link:hover {
-  color: white !important;
-
-  
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom-style: solid;
+  border-bottom-color: var(--mainColor);
+  transition: 0.2s;
 }
-
 
 .navbar-nav .active > .nav-link {
   color: white !important;
@@ -74,7 +82,7 @@ h1 {
   text-transform: uppercase !important;
   color: var(--mainColor);
   font-weight: 700;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 p {
   color: white;
@@ -118,26 +126,69 @@ p {
   position: relative;
 }
 .reservations .team::before {
-  content: "";
+  content: '';
   background-color: var(--filter) !important;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   height: 100%;
+  backdrop-filter: blur(2px);
 }
 .reservations .team .img-fluid {
   box-shadow: 0 0 40px -10px var(--mainColor);
 }
 .reservations .content {
   position: absolute;
-  left: 29%;
-  top: 80px;
+  left: 27%;
+  top: 57px;
 }
+/*
+@media only screen and (min-width: 241px) {
+  .reservations .content h1 {
+    font-size: x-large;
+    position: absolute;
+    top: -35px;
+    left: 45px;
+  }
+  .reservations .content p {
+    font-size: 10px;
+    position: relative;
+    right: 47px;
+    top: 17px;
+  }
+}
+
+@media only screen and (max-width: 287px) {
+  .reservations .content h1 {
+    font-size: x-large;
+    position: absolute;
+    top: -44px;
+  }
+  .reservations .content p {
+    font-size: 10px;
+    position: relative;
+    right: 35px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .reservations .content h1 {
+    position: absolute;
+    top: -36px;
+    left: 21px;
+  }
+  .reservations .content p {
+    position: relative;
+    right: 65px;
+    top: 25px;
+  }
+}
+*/
 .reservations .btn {
   position: absolute;
-  left: 40%;
-  bottom: 133px;
+  left: 42%;
+  bottom: 120px;
   width: 228px;
   background-color: var(--mainColor) !important;
   color: white;
@@ -145,6 +196,36 @@ p {
   padding: 12px;
   border-radius: 30px;
 }
+/*
+@media only screen and (min-width: 241px) {
+  .reservations .btn-reserve {
+    width: 100px;
+    position: absolute;
+    bottom: 33px;
+    left: 177px;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 287px) {
+  .reservations .btn-reserve {
+    width: 100px;
+    position: absolute;
+    bottom: 9px;
+    left: 92px;
+    padding: 4px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .reservations .btn-reserve {
+    width: 139px;
+    position: absolute;
+    bottom: 27px;
+    left: 200px;
+  }
+}
+*/
 .reservations .btn:hover {
   color: var(--mainColor) !important;
   background-color: white !important;
@@ -158,6 +239,11 @@ p {
 .about {
   background-color: var(--filter);
   padding: 100px 0;
+  backdrop-filter: blur(10px);
+}
+
+.about .definition:last-child {
+  line-height: 1.9;
 }
 /* End ABOUT */
 
@@ -178,7 +264,7 @@ p {
 }
 .footer .helpful-links h3,
 .footer .contact h3 {
-  font-family: "Otomanopee One", sans-serif;
+  font-family: 'Otomanopee One', sans-serif;
   letter-spacing: 2px;
   font-size: 20px;
   color: white;
@@ -199,5 +285,3 @@ p {
   color: white;
 }
 /* End Footer */
-
-

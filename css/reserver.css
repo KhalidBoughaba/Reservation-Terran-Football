@@ -75,7 +75,7 @@ span {
   border-color: var(--mainColor);
 }
 
-.btn:focus {
+.btnTimeReserve:focus {
   outline: 0;
   background-color: var(--mainColor) !important;
   color: white;
@@ -140,4 +140,5 @@ input[type='date'] {
 .footer {
   background: linear-gradient(227.41deg, #287136 0%, #80bd3c 84%);
   padding: 30px 0;
+  box-shadow: 0px 20px 0px 0px #7aad3fd9 !important;
 }

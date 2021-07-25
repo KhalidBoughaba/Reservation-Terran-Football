@@ -22,7 +22,7 @@
 </head>
 <body class="img-fdluid">
     <!-- Start Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
                 <h1>MaLa3iiB</h1> 
@@ -37,10 +37,10 @@
                 <a class="nav-link mr-3" href="#home">Accueil</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link mr-3" href="#about">A propos</a>
+                <a class="nav-link mr-3" href="index.html">A propos</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link mr-3" href="#">Contact</a>
+                <a class="nav-link mr-3" href="#contact">Contact</a>
                 </li>
             </ul>
             </div>
@@ -49,7 +49,7 @@
     <!-- End Navbar -->
 
     <!-- Start Reserver -->
-    <main class="select-reservation">
+    <main id="home" class="select-reservation">
 
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -93,6 +93,8 @@
     <!--info-resrvation-->
         <div class="container">
             <section class="info-resrvation">
+                <h1 class="text-center m-0">demande de réservation</h1>
+                <p class="text-center text-dark lead mt-3">Pour toutes demandes, veuillez remplir le formulaire ci-dessous</p>
                 <div class="row">
                     <div class="heurs col-sm-12 col-md-6 d-flex flex-column">
                         <h1><span>*</span> Choisissez la date et l'heure</h1>
@@ -114,7 +116,7 @@
                             <button class="btn btnTimeReserve" time="21">21h -> 22h</button>
                             <button class="btn btnTimeReserve" time="22">22h -> 23h</button>
                         </div>
-                        <div class="key">
+                        <div class="key text-center">
                             <i class="fa fa-square mr-1"></i>Disponible
                             <i class="fa fa-square text-warning ml-4 mr-1"></i> en attendant
                             <i class="fa fa-square text-danger ml-4 mr-1"></i>réservée
@@ -125,9 +127,9 @@
                     <div class="condition col-sm-12 col-md-6">
                         <h1>Conditions</h1>
                         <ol>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Offre non annulable, non remboursable, non modifiable.</li>
+                            <li>Après confirmation de réservation aucune annulation n'est acceptée.</li>
+                            <li>Le paiement se fait sur le terrain et avant le match.</li>
                         </ol>
                     </div>
                 </div>
@@ -139,14 +141,14 @@
                             <label for="validationCustom01"><span>*</span> Prénom</label>
                             <input type="text" class="form-control" id="prenom" required>
                             <div class="valid-feedback">
-                                Cela semble bon!
+                                bon!
                             </div>
                           </div>
                           <div class="col-md-6 mb-3">
                             <label for="validationCustom02"><span>*</span> Nom de famille</label>
                             <input type="text" class="form-control" id="nom" required>
                             <div class="valid-feedback">
-                                Cela semble bon!
+                                bon!
                             </div>
                           </div>
                         </div>
@@ -160,9 +162,9 @@
                         </div>
                         <div class="form-group">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Accepter les termes et conditions
+                            <input class="form-check-input mt-4" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label mt-3" for="invalidCheck">
+                                Accepter les conditions
                             </label>
                             <div class="invalid-feedback">
                                 Vous devez accepter avant de envoyer.
@@ -181,14 +183,17 @@
 
     
     <!-- Start Footer-->
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="site-info">
-                        <a class="navbar-brand" href="#"><h2>MaLa3iiB</h2></a>
+                        <a class="navbar-brand" href="#"><h1 class="text-light">MaLa3iiB</h1></a>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eveniet rem tempora debitis praesentium itaque nihil.
+                            Constituez vous 2 équipes de foot, 
+                            contactez-nous ou réserver votre terrain dans website 
+                            et venez vous affronter durant un match d’une heure 
+                            ou plus au plein ciel paradise foot.                        
                         </p>
                     </div>
 
