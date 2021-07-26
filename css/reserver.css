@@ -11,27 +11,16 @@ mainColor:#80BD3C;
 html {
   scroll-behavior: smooth;
 }
-/*navbar
-.navbar {
-  background: linear-gradient(227.41deg, #287136 0%, #80bd3c 84%);
-}
-.navbar-nav .nav-link {
-  color: white !important;
 
-}*/
 .select-reservation .slide::after {
-  content: '';
-  background-color: var(--filter) !important;
+  content: "";
+  background-color: #0000004d;
   position: absolute;
   left: 0;
-  top: 0;
   right: 0;
-  height: 100%;
+  height: 123%;
 }
 
-.select-reservation .slide img {
-  height: 500px;
-}
 
 .info-resrvation {
   padding: 100px 0;
@@ -100,7 +89,7 @@ span {
 
 /*style input date*/
 
-input[type='date'] {
+input[type="date"] {
   width: 274px;
   align-self: center;
   padding: 3px 62px !important;
